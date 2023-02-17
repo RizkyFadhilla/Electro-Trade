@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Product.belongsToMany(models.User,{through:models.Order, uniqueKey:"ProductId"})
     }
   }
   Product.init({
@@ -27,16 +27,16 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
     },
-    amount: {
+    stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
         unique: true,
         validate: {
           notNull: {
-            msg: "Please Fill the Amount",
+            msg: "Please Fill the Stock",
           },
           notEmpty: {
-            msg: "Please Fill the Amount",
+            msg: "Please Fill the Stock",
           },
         },
     },

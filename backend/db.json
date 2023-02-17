@@ -1,0 +1,44 @@
+{
+    "Users":[
+       {
+        "username": "user 1",
+        "password": "123",
+         "role": "admin"
+       },
+       {
+        "username": "user 2",
+        "password": "123",
+        "role": "user"
+       }
+    ],
+    "Products" :[
+        {
+            "product_name": "Samsung TV 10 inch",
+            "stock" :10,
+            "price" : 3000000,
+            "type" : "TV"
+        },
+        {
+            "product_name": "Asus A552",
+            "stock" :5,
+            "price" : 6000000,
+            "type" : "Laptop"
+        }
+    ],
+    "Orders" :[
+        {
+            "UserId": 1,
+            "ProductId" :1,
+            "amount": 10,
+            "total_price": 30000000,
+            "typeOrder":"Sell"
+        },
+        {
+            "UserId": 1,
+            "ProductId" :2,
+            "amount": 5,
+            "total_price": 30000000,
+            "typeOrder":"Sell"
+        }
+    ]
+}
